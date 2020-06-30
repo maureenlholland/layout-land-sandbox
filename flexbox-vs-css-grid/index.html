@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox vs CSS Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flexbox vs CSS Grid (but not really - you can use both!)</h1>
+    </header>
+    <section>
+        <h2>CSS Grid</h2>
+        <p>CSS Grid layouts are always thinking in two-dimensions: rows and columns. It can specify how a particular item aligns with its particular row and column. Also, the order does not matter. The item goes where it is told to go.</p>
+        <div class="grid-container">
+            <div class="grid-item grid-item--1">1</div>
+            <div class="grid-item grid-item--2">2</div>
+            <div class="grid-item grid-item--3">3</div>
+            <div class="grid-item grid-item--4">4</div>
+            <div class="grid-item grid-item--5">5</div>
+            <div class="grid-item grid-item--6">6</div>
+            <div class="grid-item grid-item--7">7</div>
+            <div class="grid-item grid-item--8">8</div>
+            <div class="grid-item grid-item--9">9</div>
+        </div>
+    </section>
+    <section>
+        <h2>Flexbox</h2>
+        <p>Flexbox is always thinking in one direction (according to the flex-direction property): rows or columns. It can wrap into multiple rows or columns if needed, but is never positioning based on the particular row or column. Order can be reversed, or re-arranged with the flex-order property on the flex-item.</p>
+        <div class="flex-container">
+            <div class="flex-item flex-item--1"></div>
+            <div class="flex-item flex-item--2"></div>
+            <div class="flex-item flex-item--3"></div>
+            <div class="flex-item flex-item--4"></div>
+            <div class="flex-item flex-item--5"></div>
+            <div class="flex-item flex-item--6"></div>
+            <div class="flex-item flex-item--7"></div>
+            <div class="flex-item flex-item--8"></div>
+            <div class="flex-item flex-item--9"></div>
+        </div>
+    </section>
+</body>
+</html>
