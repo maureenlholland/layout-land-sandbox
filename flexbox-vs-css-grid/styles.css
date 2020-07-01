@@ -1,25 +1,78 @@
+/*
+- Global
+- Grid
+- Flexbox
+*/
+
 /* Global */
 * {
     box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    background: #C9D7F8;
     font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;   
+}
+
+header,
+main {
+    padding: 10px 20px;
+}
+
+header {
+    background: #07004D;
+    text-shadow: 1px 1px 1px black;
+}
+
+h1,
+h2 {
+    font-family: 'Caveat', serif;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #07004D;
+    font-size: 2.2rem;
+}
+
+a {
+    color: #07004D;
+    text-decoration: none; 
+    border-bottom: 2px dotted #07004D;
+    padding: 0 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+a:hover,
+a:focus {
+    background: #07004D;
+    color: white;
 }
 
 .grid-item,
 .flex-item {
-    background: turquoise;
+    line-height: 1;
+    background: #07004D;
     padding: 10px;
     font-size: 2rem;
     color: white;
     text-shadow: 1px 1px 1px black;
     border-radius: 5px;
 }
+/* Global ends */
 
 /* Grid */
 .grid-container {

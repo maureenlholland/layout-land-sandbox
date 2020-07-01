@@ -4,46 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox vs CSS Grid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Flexbox vs CSS Grid (but not really - you can use both!)</h1>
+        <div class="wrapper">
+            <h1>Flexbox vs CSS Grid (but not really - you can use both!)</h1>
+        </div>
     </header>
-    <section>
-        <h2>A warning about visual order and accessibility</h2>
-        <p><strong>IMPORTANT:</strong> You will notice both CSS Grid and Flexbox have the ability to shuffle an item's visual order regardless of source order. This has consequences for keyboard and screenreader users. It is a potential failure of <a href="https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence">WCAG Level A 1.3.2 Meaningful Sequence.</a></p>
-        <p>Adrian Roselli has made a <a href="https://www.youtube.com/watch?v=UjXCAuWuXdk">feature request for developer tools to include a DOM order viewer</a>. Tabbing through a site will indicate the focus order of interactive elements but you will need a tool like <a href="https://adrianroselli.com/2019/04/reading-order-bookmarklet.html">Roselli's bookmarklet</a> or the <a href="https://accessibilityinsights.io/en/">Accessibility Insights</a> Tab Stops Checker to check non-interactive elements for now.</p>
-    </section>
-    <section>
-        <h2>CSS Grid</h2>
-        <p>CSS Grid layouts are always thinking in two-dimensions: rows and columns. It can specify how a particular item aligns with its particular row and column. The item goes where it is told to go regardless of source order (*Please note: this is an accessibility concern).</p>
-        <div class="grid-container">
-            <div class="grid-item grid-item--1">1</div>
-            <div class="grid-item grid-item--2">2</div>
-            <div class="grid-item grid-item--3">3</div>
-            <div class="grid-item grid-item--4">4</div>
-            <div class="grid-item grid-item--5">5</div>
-            <div class="grid-item grid-item--6">6</div>
-            <div class="grid-item grid-item--7">7</div>
-            <div class="grid-item grid-item--8">8</div>
-            <div class="grid-item grid-item--9">9</div>
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>A warning about visual order and accessibility</h2>
+                <p>You will notice both CSS Grid and Flexbox have the ability to shuffle an item's visual order regardless of source order. This has consequences for keyboard and screenreader users. It is a potential failure of <a href="https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence">WCAG Level A 1.3.2 Meaningful Sequence.</a></p>
+                <p>Adrian Roselli has made a <a href="https://www.youtube.com/watch?v=UjXCAuWuXdk">feature request for developer tools to include a DOM order viewer</a>. Tabbing through a site will indicate the focus order of interactive elements but you will need a tool like <a href="https://adrianroselli.com/2019/04/reading-order-bookmarklet.html">Roselli's bookmarklet</a> or the <a href="https://accessibilityinsights.io/en/">Accessibility Insights</a> Tab Stops Checker to check non-interactive elements for now.</p>
+            </section>
+            <section>
+                <h2>CSS Grid</h2>
+                <p>CSS Grid layouts are always thinking in two-dimensions: rows and columns. It can specify how a particular item aligns with its particular row and column. The item goes where it is told to go regardless of source order (*Please note: this is an accessibility concern).</p>
+                <div class="grid-container">
+                    <div class="grid-item grid-item--1">1</div>
+                    <div class="grid-item grid-item--2">2</div>
+                    <div class="grid-item grid-item--3">3</div>
+                    <div class="grid-item grid-item--4">4</div>
+                    <div class="grid-item grid-item--5">5</div>
+                    <div class="grid-item grid-item--6">6</div>
+                    <div class="grid-item grid-item--7">7</div>
+                    <div class="grid-item grid-item--8">8</div>
+                    <div class="grid-item grid-item--9">9</div>
+                </div>
+            </section>
+            <section>
+                <h2>Flexbox</h2>
+                <p>Flexbox is always thinking in one direction (according to the flex-direction property): rows or columns. It can wrap into multiple rows or columns if needed, but is never positioning based on the particular row or column. Order can be reversed, or re-arranged with the order property on the flex-item (*Please note: this is an accessibility concern).</p>
+                <div class="flex-container">
+                    <div class="flex-item flex-item--1">1</div>
+                    <div class="flex-item flex-item--2">2</div>
+                    <div class="flex-item flex-item--3">3</div>
+                    <div class="flex-item flex-item--4">4</div>
+                    <div class="flex-item flex-item--5">5</div>
+                    <div class="flex-item flex-item--6">6</div>
+                    <div class="flex-item flex-item--7">7</div>
+                    <div class="flex-item flex-item--8">8</div>
+                    <div class="flex-item flex-item--9">9</div>
+                </div>
+            </section>
         </div>
-    </section>
-    <section>
-        <h2>Flexbox</h2>
-        <p>Flexbox is always thinking in one direction (according to the flex-direction property): rows or columns. It can wrap into multiple rows or columns if needed, but is never positioning based on the particular row or column. Order can be reversed, or re-arranged with the order property on the flex-item (*Please note: this is an accessibility concern).</p>
-        <div class="flex-container">
-            <div class="flex-item flex-item--1">1</div>
-            <div class="flex-item flex-item--2">2</div>
-            <div class="flex-item flex-item--3">3</div>
-            <div class="flex-item flex-item--4">4</div>
-            <div class="flex-item flex-item--5">5</div>
-            <div class="flex-item flex-item--6">6</div>
-            <div class="flex-item flex-item--7">7</div>
-            <div class="flex-item flex-item--8">8</div>
-            <div class="flex-item flex-item--9">9</div>
-        </div>
-    </section>
+    </main>
 </body>
 </html>
