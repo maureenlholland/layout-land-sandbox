@@ -1,4 +1,8 @@
 /* Global */
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     max-width: 900px;
@@ -79,16 +83,63 @@ body {
 /* Flexbox */
 .flex-container {
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .flex-item {
-    flex: 1 1 32%;
+    height: 50px;
+    flex: 1 0 50px;
+    margin: 10px;
+}
+
+.flex-item--1 {
+    height: 150px;
+    flex-basis: 150px;
+    order: 1;
+}
+
+.flex-item--2 {
+    height: 150px;
+    flex-basis: 200px;
+    order: 3;
 }
 
 .flex-item--3 {
-    height: 100px;
     order: 2;
+}
+
+.flex-item--4 {
+    height: 100px;
+    flex-basis: 100px;
+    order: 4;
+}
+
+.flex-item--5 {
+    order: 7;
+}
+
+.flex-item--6 {
+    height: 150px;
+    flex-basis: 200px;
+    order: 5;
+}
+
+.flex-item--7 {
+    flex-basis: 150px;
+    height: 100px;
+    order: 8;
+}
+
+.flex-item--8 {
+    flex-basis: 200px;
+    height: 150px;
+    order: 9;
+}
+
+.flex-item--9 {
+    flex-basis: 150px;
+    order: 6;
 }
 
 /* Flexbox ends */
